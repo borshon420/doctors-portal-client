@@ -29,7 +29,7 @@ const AppointmentBanner = () => {
               textAlign: 'left'
               }}>
             <Box>
-            <Typography variant="h6" sx={{mb:5}} style={{color: '#51F4FC'}}>
+            <Typography variant="h6" sx={{mb:5}} style={{color: '#37B5BB'}}>
                 Appointment
             </Typography>
             <Typography variant="h4" style={{color: 'white'}}>
@@ -38,7 +38,7 @@ const AppointmentBanner = () => {
             <Typography variant="h6" sx={{my:5}}  style={{color: 'white', fontSize: 14, fontWeight: 300}}>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae soluta commodi inventore tempora? Unde, minima ipsa quibusdam consectetur a in.
             </Typography>
-            <Button style={{backgroundColor: '#51F4FC'}} variant="contained">LEARN MORE</Button>
+            <Button style={{backgroundColor: '#37B5BB'}} variant="contained">LEARN MORE</Button>
             </Box>
           </Grid>
         </Grid>
