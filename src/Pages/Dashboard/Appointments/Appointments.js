@@ -20,7 +20,7 @@ const Appointments = ({date}) => {
     },[date])
     return (
         <div>
-            <h2>Appointments: {Appointments.length}</h2>
+            <h2>Appointments: {appointments.length}</h2>
             <TableContainer component={Paper}>
       <Table  aria-label="appointments table">
         <TableHead>
