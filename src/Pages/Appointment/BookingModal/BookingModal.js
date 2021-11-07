@@ -43,7 +43,7 @@ const BookingModal = ({openBooking, handleBookingClose, booking, date, setBookin
       }
       console.log(appointment)
       // Send to the server
-      fetch('http://localhost:5000/appointments', {
+      fetch('https://polar-eyrie-66532.herokuapp.com/appointments', {
         method: 'POST',
         headers: {
           'content-type' : 'application/json'
