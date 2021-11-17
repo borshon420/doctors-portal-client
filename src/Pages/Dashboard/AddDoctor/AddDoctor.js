@@ -5,6 +5,7 @@ const AddDoctor = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [image, setImage] = useState(null);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     if (!image) {
@@ -15,13 +16,16 @@ const AddDoctor = () => {
     formData.append("email", email);
     formData.append("image", image);
 
-    fetch('http://localhost:5000/doctors', {
+    fetch('https://polar-eyrie-66532.herokuapp.com/doctors', {
       method: "POST",
       body: formData,
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("Success:", data);
+        if(data.insertedId){
+          setSuccess('doctor added successfully')
+          console.log('doctor added successfully')
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -60,6 +64,7 @@ const AddDoctor = () => {
           Add Doctor
         </Button>
       </form>
+      {success && <p style={{color: 'green'}}>{success}</p>}
     </div>
   );
 };
